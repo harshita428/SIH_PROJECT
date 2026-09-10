@@ -102,44 +102,92 @@ Four distinct game & exploration modes on each state portal:
 
 ```plaintext
 SIH_PROJECT/
-├── public/                     # Static assets and favicons
+├── public/                                # Public static assets and illustrations
+│   ├── charminar-hero.jpg                 # Hero banner for Charminar
+│   ├── charminar.png                      # Transparent silhouette / asset
+│   ├── favicon.svg                        # Kalachakra browser tab icon
+│   ├── golconda.png                       # Golconda fort illustration
+│   ├── icons.svg                          # Vector icons sprite
+│   ├── ramappa.png                        # Ramappa temple artwork
+│   └── telangana-hero.jpg                 # Telangana culture banner
 ├── src/
-│   ├── assets/                 # SVGs, historical illustrations, imagery
+│   ├── assets/                            # Component-level images & icons
+│   │   ├── charminar.png
+│   │   ├── golconda.png
+│   │   ├── hero.png                       # Main landing hero visual
+│   │   ├── ramappa.png
+│   │   ├── react.svg
+│   │   ├── telangana-hero.jpg
+│   │   └── vite.svg
 │   ├── components/
-│   │   ├── about/              # Philosophy & 4 pillars of Kalachakra
-│   │   ├── common/             # Badges, Modals, SearchModal, StatsBar, JaliPattern
-│   │   ├── cta/                # Student Quest Call to Action
-│   │   ├── curriculum/         # NEP 2020 Grade 6-12 Curriculum Quests
-│   │   ├── exploreIndia/       # Interactive Map, StateCulturalHub, ActivityCard, Quiz & Puzzle
-│   │   ├── features/           # Core EdTech capability showcases
-│   │   ├── hero/               # Hero banner with dynamic wheel animations
-│   │   ├── layout/             # Sticky Navbar, Footer, Navigation drawer
-│   │   ├── monuments/          # MonumentExplorer & Architectural Blueprint Modal
-│   │   ├── timeline/           # EraTimeWheel (6 Epochs timeline system)
-│   │   └── traditions/         # Performing arts, metallurgy, ancient sciences showcase
+│   │   ├── about/
+│   │   │   └── AboutSection.jsx           # Mission, philosophy & 4 core pillars
+│   │   ├── common/
+│   │   │   ├── Badge.jsx                  # UI badge pill component
+│   │   │   ├── HeritageSilhouettes.jsx    # Decorative temple & monument skyline silhouettes
+│   │   │   ├── JaliPattern.jsx            # Traditional Indian geometric jali overlays
+│   │   │   ├── KalachakraWheel.jsx        # Rotating dynamic wheel graphic
+│   │   │   ├── SearchModal.jsx            # Ctrl+K instant search omnibox
+│   │   │   └── StatsBar.jsx               # Heritage metrics & counter strip
+│   │   ├── cta/
+│   │   │   └── StudentQuestCTA.jsx        # Call-to-action banner for student journeys
+│   │   ├── curriculum/
+│   │   │   └── CurriculumSection.jsx      # NEP 2020 Grade 6–12 syllabus quest mappings
+│   │   ├── exploreIndia/
+│   │   │   ├── ActivityCard.jsx           # Cards for Explore, Puzzle, Quiz, Mystery
+│   │   │   ├── CulturalInfoSection.jsx    # State overview, rulers, traditions & cuisine
+│   │   │   ├── ExploreIndiaSection.jsx    # Interactive map section container
+│   │   │   ├── ExploreNowGame.jsx         # Guided heritage exploration & virtual discovery
+│   │   │   ├── FamousPlacesGrid.jsx       # Grid of notable regional landmarks & monuments
+│   │   │   ├── IndiaMap.jsx               # High-precision interactive SVG India map
+│   │   │   ├── PuzzleGame.jsx             # Sliding tile & jigsaw monument puzzles
+│   │   │   ├── QuizGame.jsx               # Timed regional trivia quiz interface
+│   │   │   ├── SlidingPuzzleBoard.jsx     # Interactive tile manipulation board
+│   │   │   ├── StateCulturalHub.jsx       # Consolidated state cultural encyclopedia
+│   │   │   └── StatePreviewCard.jsx       # Hover preview drawer for map states
+│   │   ├── features/
+│   │   │   └── FeaturesSection.jsx        # Showcase of 6 core EdTech capabilities
+│   │   ├── hero/
+│   │   │   └── HeroSection.jsx            # Landing page hero banner & quick CTAs
+│   │   ├── layout/
+│   │   │   ├── Footer.jsx                 # Footer with quick links & newsletter
+│   │   │   └── Navbar.jsx                 # Header with navigation & quick search trigger
+│   │   ├── monuments/
+│   │   │   ├── MonumentExplorer.jsx       # Filterable regional monuments gallery
+│   │   │   └── MonumentModal.jsx          # Architectural blueprint & audio guide popup
+│   │   ├── timeline/
+│   │   │   └── EraTimeWheel.jsx           # Interactive 6-epoch historical timeline wheel
+│   │   └── traditions/
+│   │       └── TraditionsShowcase.jsx     # Classical dance, metallurgy & ancient sciences
 │   ├── context/
-│   │   └── ProgressContext.jsx # Gamification state, XP, Badges & Quiz streak tracking
+│   │   └── ProgressContext.jsx            # React Context for XP, badges, streak & quiz scores
 │   ├── data/
-│   │   ├── curriculumData.js   # Class 6-12 chapter mappings
-│   │   ├── erasData.js         # 6 Historical epochs detailed data
-│   │   ├── gameOptions.js      # Configuration for Explore, Puzzle, Quiz, Mystery
-│   │   ├── indiaMapData.js     # High-precision SVG paths for all Indian States
-│   │   ├── monumentsData.js    # Blueprints, audio transcripts, historical metrics
-│   │   ├── stateQuizQuestions.js # Comprehensive question bank with explanations
-│   │   ├── statesData.js       # In-depth cultural data for Indian states
-│   │   └── traditionsData.js   # Heritage crafts, dance, martial arts, sciences
+│   │   ├── curriculumData.js              # Grade 6–12 chapter mappings & quest objectives
+│   │   ├── erasData.js                    # 6 Historical epochs detailed data & quiz items
+│   │   ├── gameOptions.js                 # Configuration for Explore, Puzzle, Quiz, Mystery modes
+│   │   ├── indiaMapData.js                # SVG vector coordinate paths for all Indian states
+│   │   ├── monumentsData.js               # Blueprints, audio transcripts & historical metrics
+│   │   ├── stateQuizQuestions.js          # Question bank with explanations for state quizzes
+│   │   ├── statesData.js                  # In-depth cultural data, rulers, crafts & cuisine
+│   │   └── traditionsData.js              # Heritage crafts, dance, martial arts & sciences
 │   ├── pages/
-│   │   ├── HomePage.jsx        # Landing page with all interactive modules
-│   │   ├── MysteryGame.jsx     # Full-screen / Modal Citadel Mystery Adventure
-│   │   └── StateDetailPage.jsx # State-specific cultural hub with 4 game tabs
+│   │   ├── HomePage.jsx                   # Main single-page application landing view
+│   │   ├── MysteryGame.jsx                # Full-screen / Modal Citadel Mystery Adventure
+│   │   └── StateDetailPage.jsx            # State-specific cultural hub with 4 game tabs
 │   ├── utils/
-│   │   └── localStorage.js     # Helpers for progress syncing
-│   ├── App.jsx                 # App routing, global search modal & shortcuts
-│   ├── index.css               # Heritage color palette & custom scrollbar styles
-│   └── main.jsx                # Application root entry point
-├── package.json
-├── tailwind.config.js
-└── vite.config.js
+│   │   ├── localStorage.js                # LocalStorage safe getter/setter helpers
+│   │   ├── slidingPuzzle.js               # Sliding tile puzzle mechanics & solvable board generator
+│   │   └── stateProgress.js               # State completion & activity progress trackers
+│   ├── App.css                            # Custom app animations & keyframes
+│   ├── App.jsx                            # Root routing, global shortcut handlers & modals
+│   ├── index.css                          # Tailwind CSS imports, font styles & theme tokens
+│   └── main.jsx                           # React DOM bootstrap entrypoint
+├── .oxlintrc.json                         # Oxlint static analysis configuration
+├── index.html                             # Single Page Application HTML shell
+├── package.json                           # Project dependencies, metadata & build scripts
+├── postcss.config.js                      # PostCSS plugins (Tailwind CSS, Autoprefixer)
+├── tailwind.config.js                     # Heritage theme colors (saffron, maroon, gold, navy)
+└── vite.config.js                         # Vite build & plugin configurations
 ```
 
 ---
