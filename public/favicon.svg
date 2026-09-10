@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="46" stroke="#D4AF37" stroke-width="2.5" stroke-dasharray="4 2" />
+  <circle cx="50" cy="50" r="40" stroke="#E65100" stroke-width="3" />
+  <circle cx="50" cy="50" r="28" stroke="#D4AF37" stroke-width="1.5" />
+  <!-- 12 radiating spokes -->
+  <g stroke="#E65100" stroke-width="2" stroke-linecap="round">
+    <line x1="50" y1="10" x2="50" y2="90" />
+    <line x1="10" y1="50" x2="90" y2="50" />
+    <line x1="21.7" y1="21.7" x2="78.3" y2="78.3" />
+    <line x1="21.7" y1="78.3" x2="78.3" y2="21.7" />
+    <line x1="30" y1="15.4" x2="70" y2="84.6" />
+    <line x1="15.4" y1="30" x2="84.6" y2="70" />
+    <line x1="15.4" y1="70" x2="84.6" y2="30" />
+    <line x1="30" y1="84.6" x2="70" y2="15.4" />
+  </g>
+  <circle cx="50" cy="50" r="14" fill="#0A192F" stroke="#D4AF37" stroke-width="2" />
+  <circle cx="50" cy="50" r="6" fill="#FF9933" />
+</svg>
